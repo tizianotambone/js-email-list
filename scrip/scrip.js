@@ -5,7 +5,6 @@ const itemlist= document.getElementById("first-email")
 // dichiaro le variabili
 
 const eMail= "https://flynn.boolean.careers/exercises/api/random/mail";
-const tenMail=[];
 let user ;
 
 
@@ -17,12 +16,11 @@ let user ;
     axios.get(eMail).then(generic =>{
         user = generic.data.response;
         console.log(user)
-        tenMail.push(user)
         specifcList.innerHTML +=`<li id="first-email">${user}</li>`;
     })
 }
 
-    console.log(tenMail)
+    
             
             
    
