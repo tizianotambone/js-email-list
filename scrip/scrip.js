@@ -6,23 +6,25 @@ const itemlist= document.getElementById("first-email")
 
 const eMail= "https://flynn.boolean.careers/exercises/api/random/mail";
 const tenMail=[];
+let user ;
+
 
 // chiamata ajax per l'interrogazione delle eMail
 
   
 
-        for (let index = 0; index < 10; index++) {
-            axios.get(eMail).then(generic =>{
-                const user = generic.data.response;
-                console.log(user)
-                tenMail.push(user)
-            })
-            }
+ for (let index = 0; index < 10; index++) {
+    axios.get(eMail).then(generic =>{
+        user = generic.data.response;
+        console.log(user)
+        tenMail.push(user)
+        specifcList.innerHTML +=`<li id="first-email">${user}</li>`;
+    })
+}
 
     console.log(tenMail)
             
             
-   
    
   
     
