@@ -5,14 +5,25 @@ const itemlist= document.getElementById("first-email")
 // dichiaro le variabili
 
 const eMail= "https://flynn.boolean.careers/exercises/api/random/mail";
-const ten =[];
+const tenMail=[];
 
-// chiamata ajax per l'interrogazione dell'endpoint
+// chiamata ajax per l'interrogazione delle eMail
 
-axios.get(eMail).then(generic =>{
-    const user = generic.data.response;
-    console.log(user)
+  
+
+        for (let index = 0; index < 10; index++) {
+            axios.get(eMail).then(generic =>{
+                const user = generic.data.response;
+                console.log(user)
+                tenMail.push(user)
+            })
+            }
+
+    console.log(tenMail)
+            
+            
+   
+   
   
     
    
-})
